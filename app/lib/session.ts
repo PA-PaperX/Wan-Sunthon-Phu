@@ -5,6 +5,7 @@ import { SessionData, Question } from '../types/quiz';
 import accData from '../assets/acc.json';
 
 const COOKIE_NAME = 'quiz_session';
+const SEEN_COOKIE_NAME = 'seen_questions';
 const MAX_AGE = 300; // 5 minutes
 
 interface CookieSession {
@@ -17,12 +18,35 @@ interface CookieSession {
 }
 
 export async function startSession() {
-  const allWords: Question[] = [...accData.daily_life_words, ...accData.transliterated_words] as Question[];
-  for (let i = allWords.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [allWords[i], allWords[j]] = [allWords[j], allWords[i]];
+  const allWords: Question[] = [
+    ...accData.daily_life_words.map(w => ({...w, category: 'daily_life_words'})), 
+    ...accData.transliterated_words.map(w => ({...w, category: 'transliterated_words'})),
+    ...(accData.controversial_words || []).map(w => ({...w, category: 'controversial_words'}))
+  ] as Question[];
+
+  const cookieStore = await cookies();
+  const seenCookie = cookieStore.get(SEEN_COOKIE_NAME);
+  let seenIds: number[] = [];
+  try {
+    if (seenCookie) seenIds = JSON.parse(seenCookie.value);
+  } catch (e) {
+    seenIds = [];
   }
-  const shuffled = allWords.slice(0, 5);
+
+  let availableWords = allWords.filter(w => !seenIds.includes(w.id));
+  if (availableWords.length < 10) {
+    // Reset if almost all words have been played
+    availableWords = allWords;
+    seenIds = [];
+  }
+
+  for (let i = availableWords.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [availableWords[i], availableWords[j]] = [availableWords[j], availableWords[i]];
+  }
+  const shuffled = availableWords.slice(0, 10);
+  
+  seenIds = [...seenIds, ...shuffled.map(q => q.id)];
 
   const cookieSession: CookieSession = {
     questionIds: shuffled.map(q => q.id),
@@ -32,9 +56,16 @@ export async function startSession() {
     userAnswers: []
   };
 
-  const cookieStore = await cookies();
   cookieStore.set(COOKIE_NAME, JSON.stringify(cookieSession), {
     maxAge: MAX_AGE,
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    path: '/',
+    sameSite: 'lax',
+  });
+
+  cookieStore.set(SEEN_COOKIE_NAME, JSON.stringify(seenIds), {
+    maxAge: 60 * 60 * 24 * 365, // Remember for 1 year
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     path: '/',
@@ -55,7 +86,11 @@ export async function getSession(): Promise<SessionData | null> {
     }
     
     // Inflate
-    const allWords: Question[] = [...accData.daily_life_words, ...accData.transliterated_words] as Question[];
+    const allWords: Question[] = [
+      ...accData.daily_life_words.map(w => ({...w, category: 'daily_life_words'})), 
+      ...accData.transliterated_words.map(w => ({...w, category: 'transliterated_words'})),
+      ...(accData.controversial_words || []).map(w => ({...w, category: 'controversial_words'}))
+    ] as Question[];
     const questions = cookieSession.questionIds.map(id => allWords.find(w => w.id === id)).filter(Boolean) as Question[];
 
     const session: SessionData = {

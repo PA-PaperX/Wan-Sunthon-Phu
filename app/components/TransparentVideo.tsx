@@ -97,7 +97,11 @@ export default function TransparentVideo({
 
     video.addEventListener('play', handlePlay);
     video.addEventListener('timeupdate', handleTimeUpdate);
-    video.play().catch(e => console.error("Video play failed", e));
+    video.play().catch(e => {
+      if (e.name !== 'AbortError') {
+        console.error("Video play failed", e);
+      }
+    });
 
     return () => {
       video.removeEventListener('play', handlePlay);

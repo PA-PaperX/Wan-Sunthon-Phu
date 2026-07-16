@@ -3,6 +3,9 @@ export interface Question {
   correct: string;
   wrong: string[];
   explanation: string;
+  imageUrl?: string;
+  category?: string;
+  hasWiki?: boolean;
 }
 
 export interface SessionData {

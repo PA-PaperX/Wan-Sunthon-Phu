@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { SessionData } from '../types/quiz';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import TransparentVideo from '../components/TransparentVideo';
 
 const ShapeIcon = ({ index, className = "" }: { index: number, className?: string }) => {
@@ -172,6 +172,20 @@ export default function QuizClient({
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", bounce: 0.5, delay: 0.2 }}
         >
+          {question.imageUrl && (
+            <motion.div 
+              className="mb-6 relative w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl border-4 border-white"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <img 
+                src={question.imageUrl} 
+                alt="Hint" 
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          )}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center text-[#5C4033] leading-tight drop-shadow-sm tracking-wide">
             คำไหนเขียนถูก?
           </h2>
@@ -205,7 +219,7 @@ export default function QuizClient({
                 animate={{ 
                   opacity: 1, 
                   y: 0, 
-                  scale: answered && word === question.correct ? 1.05 : answered && word === selectedWord ? [1, 0.95, 1.05, 0.95, 1] : answered ? 0.95 : 1
+                  scale: answered && word === question.correct ? 1.05 : answered && word === selectedWord ? 0.9 : answered ? 0.95 : 1
                 }}
                 transition={{ 
                   duration: answered ? 0.4 : 0.5, 
@@ -241,19 +255,7 @@ export default function QuizClient({
           })}
         </div>
 
-        {answered && !showExplanation && (
-          <motion.div 
-            className="fixed inset-0 z-[110] flex items-center justify-center pointer-events-none"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ type: "spring", bounce: 0.6 }}
-          >
-            <h1 className="text-5xl sm:text-7xl md:text-8xl font-black text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]">
-              {selectedWord === question.correct ? 'ถูกต้อง!' : 'ผิด!'}
-            </h1>
-          </motion.div>
-        )}
+
       </motion.div>
 
       {/* Explanation Modal */}
@@ -267,15 +269,38 @@ export default function QuizClient({
               {question.explanation}
             </div>
             
-            <a 
-              href="https://dictionary.orst.go.th/index.php" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-[#2D9596] hover:text-[#1E6B6C] underline underline-offset-4 mb-8 text-sm sm:text-base font-semibold"
-            >
-              อ้างอิงจาก: พจนานุกรม ฉบับราชบัณฑิตยสถาน
-            </a>
-
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-8 text-sm sm:text-base font-semibold w-full justify-center">
+              <a 
+                href="https://dictionary.orst.go.th/index.php" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#2D9596] hover:text-[#1E6B6C] underline underline-offset-4 flex items-center justify-center gap-1"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                พจนานุกรม
+              </a>
+              <a 
+                href="https://royalsociety.go.th/%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8D%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AA%E0%B8%B3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%87%E0%B8%B2/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#2D9596] hover:text-[#1E6B6C] underline underline-offset-4 flex items-center justify-center gap-1"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+                ศัพท์บัญญัติ
+              </a>
+              {question.hasWiki && (
+                <a 
+                  href={`https://th.wikipedia.org/wiki/${encodeURIComponent(question.correct)}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#2D9596] hover:text-[#1E6B6C] underline underline-offset-4 flex items-center justify-center gap-1"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                  วิกิพีเดีย
+                </a>
+              )}
+            </div>
+            
             <div className="w-full flex items-center justify-between gap-4">
               <span className="text-[#8B5A2B] opacity-70 text-sm font-medium">ไปข้อถัดไปใน {timeLeft} วินาที...</span>
               <button
@@ -308,6 +333,26 @@ export default function QuizClient({
         {showVideo === 'win' && <TransparentVideo src="/videos/win_normal.mp4" onEnded={handleVideoEnded} stopAt={2} />}
         {showVideo === 'lose' && <TransparentVideo src="/videos/lose_normal.mp4" onEnded={handleVideoEnded} playbackRate={2} />}
       </div>
+
+      {/* Answer Feedback Overlay (Needs to be at root to be above video) */}
+      <AnimatePresence>
+        {answered && !showExplanation && (
+          <motion.div 
+            key="feedback-overlay"
+            className="fixed inset-0 z-[130] flex items-center justify-center pointer-events-none"
+            initial={{ opacity: 0, scale: 0.2, y: 50, rotate: -5 }}
+            animate={{ opacity: 1, scale: 1, y: 0, rotate: 0 }}
+            exit={{ opacity: 0, scale: 1.5, filter: 'blur(10px)' }}
+            transition={{ type: "spring", bounce: 0.7, duration: 0.8 }}
+          >
+            <h1 className={`text-6xl sm:text-8xl md:text-9xl font-black drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)] ${
+              selectedWord === question.correct ? 'text-[#65B741]' : 'text-[#EF4040]'
+            } [text-shadow:_4px_4px_0_#FFF,_-4px_-4px_0_#FFF,_4px_-4px_0_#FFF,_-4px_4px_0_#FFF,_0_4px_0_#FFF,_4px_0_0_#FFF,_-4px_0_0_#FFF,_0_-4px_0_#FFF]`}>
+              {selectedWord === question.correct ? 'ถูกต้อง!' : 'ผิด!'}
+            </h1>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
