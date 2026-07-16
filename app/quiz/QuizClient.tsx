@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { SessionData } from '../types/quiz';
 import { useRouter } from 'next/navigation';
+import GreenScreenVideo from '../components/GreenScreenVideo';
 
 export default function QuizClient({
   session,
@@ -15,6 +16,7 @@ export default function QuizClient({
   const [answered, setAnswered] = useState(false);
   const [selectedWord, setSelectedWord] = useState<string | null>(null);
   const [displayScore, setDisplayScore] = useState(session.score);
+  const [showVideo, setShowVideo] = useState<'win' | 'lose' | null>(null);
 
   const question = session.questions[session.currentIndex];
   const isLastQuestion = session.currentIndex === session.questions.length - 1;
@@ -31,7 +33,12 @@ export default function QuizClient({
     setAnswered(true);
 
     const isCorrect = word === question.correct;
-    if (isCorrect) setDisplayScore(s => s + 1);
+    if (isCorrect) {
+      setDisplayScore(s => s + 1);
+      setShowVideo('win');
+    } else {
+      setShowVideo('lose');
+    }
 
     const newSession = {
       ...session,
@@ -104,6 +111,9 @@ export default function QuizClient({
           </button>
         </div>
       )}
+
+      {showVideo === 'win' && <GreenScreenVideo src="/videos/win_greenscreen.mp4" onEnded={() => setShowVideo(null)} />}
+      {showVideo === 'lose' && <GreenScreenVideo src="/videos/lose_greenscreen.mp4" onEnded={() => setShowVideo(null)} />}
     </div>
   );
 }
