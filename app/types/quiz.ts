@@ -1,7 +1,7 @@
 export interface Question {
   id: number;
   correct: string;
-  wrong: string;
+  wrong: string[];
   explanation: string;
 }
 

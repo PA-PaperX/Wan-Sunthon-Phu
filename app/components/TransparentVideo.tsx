@@ -1,22 +1,48 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
-export default function TransparentVideo({ src, onEnded }: { src: string, onEnded?: () => void }) {
+export default function TransparentVideo({ 
+  src, 
+  onEnded, 
+  stopAt, 
+  playbackRate = 1 
+}: { 
+  src: string, 
+  onEnded?: () => void, 
+  stopAt?: number, 
+  playbackRate?: number 
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  
+  const onEndedRef = useRef(onEnded);
+  const stopAtRef = useRef(stopAt);
+  const playbackRateRef = useRef(playbackRate);
+
+  useEffect(() => {
+    onEndedRef.current = onEnded;
+    stopAtRef.current = stopAt;
+    playbackRateRef.current = playbackRate;
+  }, [onEnded, stopAt, playbackRate]);
 
   useEffect(() => {
     const video = videoRef.current;
     const canvas = canvasRef.current;
     if (!video || !canvas) return;
 
+    video.playbackRate = playbackRateRef.current;
+
     const ctx = canvas.getContext('2d', { willReadFrequently: true });
     if (!ctx) return;
 
     let animationFrameId: number;
+    let endedTriggered = false;
 
     const renderFrame = () => {
       if (video.paused || video.ended) {
+        // Keep rendering the last frame if paused, so it freezes!
+        // But don't keep looping endlessly if it's completely stopped and we don't need updates.
+        // Actually, if we just stop requestAnimationFrame, the canvas holds the last drawn image.
         return;
       }
 
@@ -58,11 +84,24 @@ export default function TransparentVideo({ src, onEnded }: { src: string, onEnde
       animationFrameId = requestAnimationFrame(renderFrame);
     };
 
+    const handleTimeUpdate = () => {
+      const stop = stopAtRef.current;
+      if (stop && video.currentTime >= stop && !endedTriggered) {
+        if (!video.paused) {
+          video.pause();
+          endedTriggered = true;
+          if (onEndedRef.current) onEndedRef.current();
+        }
+      }
+    };
+
     video.addEventListener('play', handlePlay);
+    video.addEventListener('timeupdate', handleTimeUpdate);
     video.play().catch(e => console.error("Video play failed", e));
 
     return () => {
       video.removeEventListener('play', handlePlay);
+      video.removeEventListener('timeupdate', handleTimeUpdate);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -75,7 +114,9 @@ export default function TransparentVideo({ src, onEnded }: { src: string, onEnde
         className="hidden"
         playsInline
         muted
-        onEnded={onEnded}
+        onEnded={() => {
+          if (onEndedRef.current) onEndedRef.current();
+        }}
       />
       <canvas
         ref={canvasRef}
