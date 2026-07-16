@@ -3,12 +3,14 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { startSession } from '../lib/session';
 
-export default function AnimatedHome({ onStart }: { onStart: () => void }) {
+export default function AnimatedHome() {
+  const router = useRouter();
   const [mounted, setMounted] = useState(false);
   const floatingChars = ['ก', 'ข', 'ค', 'ฆ', 'ง', 'จ', 'ฉ', 'ช', 'ซ', 'ญ', 'ฎ', 'ฏ'];
   
-  // Use useEffect to prevent hydration mismatch for random values
   const [randomPositions, setRandomPositions] = useState<{x: number, y: number, r: number, s: number}[]>([]);
   
   useEffect(() => {
@@ -20,6 +22,11 @@ export default function AnimatedHome({ onStart }: { onStart: () => void }) {
     })));
     setMounted(true);
   }, []);
+
+  const handleStart = () => {
+    startSession();
+    router.push('/quiz');
+  };
 
   return (
     <div className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden min-h-screen bg-[#FDFBF7] p-4">
@@ -77,22 +84,20 @@ export default function AnimatedHome({ onStart }: { onStart: () => void }) {
         </div>
         
         <div className="p-8 flex justify-center bg-gradient-to-b from-[#FDFBF7] to-[#F3ECE1]">
-          <form action={onStart} className="w-full">
-            <motion.button
-              type="submit"
-              className="w-full bg-gradient-to-r from-[#996515] to-[#8B5A2B] hover:from-[#8B5A2B] hover:to-[#6E4823] text-white font-black tracking-wider py-5 px-8 rounded-full text-2xl shadow-[0_8px_20px_rgba(139,90,43,0.3)] transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              animate={{ 
-                boxShadow: ['0px 8px 20px rgba(139,90,43,0.3)', '0px 12px 30px rgba(139,90,43,0.6)', '0px 8px 20px rgba(139,90,43,0.3)']
-              }}
-              transition={{
-                boxShadow: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
-              }}
-            >
-              เริ่มเกม
-            </motion.button>
-          </form>
+          <motion.button
+            onClick={handleStart}
+            className="w-full bg-gradient-to-r from-[#996515] to-[#8B5A2B] hover:from-[#8B5A2B] hover:to-[#6E4823] text-white font-black tracking-wider py-5 px-8 rounded-full text-2xl shadow-[0_8px_20px_rgba(139,90,43,0.3)] transition-all"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            animate={{ 
+              boxShadow: ['0px 8px 20px rgba(139,90,43,0.3)', '0px 12px 30px rgba(139,90,43,0.6)', '0px 8px 20px rgba(139,90,43,0.3)']
+            }}
+            transition={{
+              boxShadow: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
+            }}
+          >
+            เริ่มเกม
+          </motion.button>
         </div>
       </motion.div>
     </div>

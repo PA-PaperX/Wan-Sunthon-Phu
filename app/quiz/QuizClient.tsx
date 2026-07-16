@@ -5,6 +5,7 @@ import { SessionData } from '../types/quiz';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import TransparentVideo from '../components/TransparentVideo';
+import { updateSession } from '../lib/session';
 
 const ShapeIcon = ({ index, className = "" }: { index: number, className?: string }) => {
   const shapes = [
@@ -26,11 +27,9 @@ const ShapeIcon = ({ index, className = "" }: { index: number, className?: strin
 };
 
 export default function QuizClient({
-  session,
-  updateSessionAction
+  session
 }: {
   session: SessionData;
-  updateSessionAction: (newSession: SessionData) => Promise<void>;
 }) {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(session.currentIndex);
@@ -76,7 +75,7 @@ export default function QuizClient({
       userAnswers: [...(latestSessionRef.current.userAnswers || []), word]
     };
     latestSessionRef.current = newSession;
-    updateSessionAction(newSession).catch(console.error);
+    updateSession(newSession);
   };
 
   const handleVideoEnded = () => {
@@ -87,7 +86,7 @@ export default function QuizClient({
   const handleNext = () => {
     if (isLastQuestion) {
       const finalSession = { ...latestSessionRef.current, completed: true };
-      updateSessionAction(finalSession).catch(console.error);
+      updateSession(finalSession);
       router.push('/result');
     } else {
       const nextIndex = currentIndex + 1;
@@ -103,7 +102,7 @@ export default function QuizClient({
       setShowExplanation(false);
       setTimeLeft(8);
 
-      updateSessionAction(nextSession).catch(console.error);
+      updateSession(nextSession);
     }
   };
 

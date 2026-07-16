@@ -1,14 +1,11 @@
-'use server';
-
-import { cookies } from 'next/headers';
 import { SessionData, Question } from '../types/quiz';
 import accData from '../assets/acc.json';
 
-const COOKIE_NAME = 'quiz_session';
-const SEEN_COOKIE_NAME = 'seen_questions';
+const STORAGE_KEY = 'quiz_session';
+const SEEN_STORAGE_KEY = 'seen_questions';
 const MAX_AGE = 300; // 5 minutes
 
-interface CookieSession {
+interface LocalStorageSession {
   questionIds: number[];
   currentIndex: number;
   score: number;
@@ -17,25 +14,23 @@ interface CookieSession {
   userAnswers: string[];
 }
 
-export async function startSession() {
+export function startSession() {
   const allWords: Question[] = [
     ...accData.daily_life_words.map(w => ({...w, category: 'daily_life_words'})), 
     ...accData.transliterated_words.map(w => ({...w, category: 'transliterated_words'})),
     ...(accData.controversial_words || []).map(w => ({...w, category: 'controversial_words'}))
   ] as Question[];
 
-  const cookieStore = await cookies();
-  const seenCookie = cookieStore.get(SEEN_COOKIE_NAME);
   let seenIds: number[] = [];
   try {
-    if (seenCookie) seenIds = JSON.parse(seenCookie.value);
+    const seenStr = localStorage.getItem(SEEN_STORAGE_KEY);
+    if (seenStr) seenIds = JSON.parse(seenStr);
   } catch (e) {
     seenIds = [];
   }
 
   let availableWords = allWords.filter(w => !seenIds.includes(w.id));
   if (availableWords.length < 10) {
-    // Reset if almost all words have been played
     availableWords = allWords;
     seenIds = [];
   }
@@ -48,7 +43,7 @@ export async function startSession() {
   
   seenIds = [...seenIds, ...shuffled.map(q => q.id)];
 
-  const cookieSession: CookieSession = {
+  const storageSession: LocalStorageSession = {
     questionIds: shuffled.map(q => q.id),
     currentIndex: 0,
     score: 0,
@@ -56,59 +51,44 @@ export async function startSession() {
     userAnswers: []
   };
 
-  cookieStore.set(COOKIE_NAME, JSON.stringify(cookieSession), {
-    maxAge: MAX_AGE,
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    path: '/',
-    sameSite: 'lax',
-  });
-
-  cookieStore.set(SEEN_COOKIE_NAME, JSON.stringify(seenIds), {
-    maxAge: 60 * 60 * 24 * 365, // Remember for 1 year
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    path: '/',
-    sameSite: 'lax',
-  });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(storageSession));
+  localStorage.setItem(SEEN_STORAGE_KEY, JSON.stringify(seenIds));
 }
 
-export async function getSession(): Promise<SessionData | null> {
-  const cookieStore = await cookies();
-  const sessionCookie = cookieStore.get(COOKIE_NAME);
-  if (!sessionCookie) return null;
+export function getSession(): SessionData | null {
+  if (typeof window === 'undefined') return null;
+  const sessionStr = localStorage.getItem(STORAGE_KEY);
+  if (!sessionStr) return null;
 
   try {
-    const cookieSession: CookieSession = JSON.parse(sessionCookie.value);
-    if (Date.now() > cookieSession.expiresAt) {
-      await clearSession();
+    const storageSession: LocalStorageSession = JSON.parse(sessionStr);
+    if (Date.now() > storageSession.expiresAt) {
+      clearSession();
       return null;
     }
     
-    // Inflate
     const allWords: Question[] = [
       ...accData.daily_life_words.map(w => ({...w, category: 'daily_life_words'})), 
       ...accData.transliterated_words.map(w => ({...w, category: 'transliterated_words'})),
       ...(accData.controversial_words || []).map(w => ({...w, category: 'controversial_words'}))
     ] as Question[];
-    const questions = cookieSession.questionIds.map(id => allWords.find(w => w.id === id)).filter(Boolean) as Question[];
+    const questions = storageSession.questionIds.map(id => allWords.find(w => w.id === id)).filter(Boolean) as Question[];
 
-    const session: SessionData = {
+    return {
       questions,
-      currentIndex: cookieSession.currentIndex,
-      score: cookieSession.score,
-      expiresAt: cookieSession.expiresAt,
-      completed: cookieSession.completed,
-      userAnswers: cookieSession.userAnswers
+      currentIndex: storageSession.currentIndex,
+      score: storageSession.score,
+      expiresAt: storageSession.expiresAt,
+      completed: storageSession.completed,
+      userAnswers: storageSession.userAnswers
     };
-    return session;
   } catch {
     return null;
   }
 }
 
-export async function updateSession(session: SessionData) {
-  const cookieSession: CookieSession = {
+export function updateSession(session: SessionData) {
+  const storageSession: LocalStorageSession = {
     questionIds: session.questions.map(q => q.id),
     currentIndex: session.currentIndex,
     score: session.score,
@@ -116,19 +96,9 @@ export async function updateSession(session: SessionData) {
     completed: session.completed,
     userAnswers: session.userAnswers
   };
-
-  const cookieStore = await cookies();
-  const remainingMs = cookieSession.expiresAt - Date.now();
-  cookieStore.set(COOKIE_NAME, JSON.stringify(cookieSession), {
-    maxAge: Math.max(0, Math.floor(remainingMs / 1000)),
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    path: '/',
-    sameSite: 'lax',
-  });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(storageSession));
 }
 
-export async function clearSession() {
-  const cookieStore = await cookies();
-  cookieStore.delete(COOKIE_NAME);
+export function clearSession() {
+  localStorage.removeItem(STORAGE_KEY);
 }
