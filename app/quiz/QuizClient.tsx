@@ -51,8 +51,7 @@ export default function QuizClient({
       // Reset state for next question
       setAnswered(false);
       setSelectedWord(null);
-      // Force reload to get new randomized options
-      window.location.reload();
+      router.refresh();
     }
   };
 
@@ -88,7 +87,7 @@ export default function QuizClient({
       </div>
 
       {answered && (
-        <div className="mt-8 animate-fade-in">
+        <div className="mt-8">
           <div className={`p-4 rounded-lg mb-6 ${selectedWord === question.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
             <p className="font-bold mb-2">
               {selectedWord === question.correct ? '🎉 ถูกต้อง!' : '❌ ผิดครับ/ค่ะ'}
