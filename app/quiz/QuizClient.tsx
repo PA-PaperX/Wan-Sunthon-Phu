@@ -42,7 +42,8 @@ export default function QuizClient({
 
     const newSession = {
       ...session,
-      score: isCorrect ? session.score + 1 : session.score
+      score: isCorrect ? session.score + 1 : session.score,
+      userAnswers: [...(session.userAnswers || []), word]
     };
 
     await updateSessionAction(newSession);
@@ -95,20 +96,10 @@ export default function QuizClient({
       </div>
 
       {answered && (
-        <div className="fixed inset-0 z-[110] flex items-end justify-center pb-8 p-4 pointer-events-none animate-in slide-in-from-bottom-8 duration-500">
-          <div className={`w-full max-w-md p-6 rounded-2xl shadow-2xl border-4 backdrop-blur-xl pointer-events-auto ${selectedWord === question.correct ? 'bg-green-50/95 border-green-500 text-green-900' : 'bg-red-50/95 border-red-500 text-red-900'}`}>
-            <p className="text-2xl font-black mb-3">
-              {selectedWord === question.correct ? '🎉 ถูกต้อง!' : '❌ ผิดครับ/ค่ะ'}
-            </p>
-            <p className="text-lg font-medium leading-relaxed mb-6">{question.explanation}</p>
-
-            <button
-              onClick={handleNext}
-              className="w-full bg-[#996515] text-white font-bold py-4 rounded-xl text-lg shadow-lg hover:bg-[#8B5A2B] transition-transform active:scale-95"
-            >
-              {isLastQuestion ? 'ดูผลคะแนน' : 'ข้ามไปข้อถัดไป'}
-            </button>
-          </div>
+        <div className="fixed inset-0 z-[110] flex items-center justify-center pointer-events-none animate-in fade-in zoom-in duration-500">
+          <h1 className="text-6xl font-black text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
+            {selectedWord === question.correct ? 'ถูกต้อง!' : 'ผิด!'}
+          </h1>
         </div>
       )}
 

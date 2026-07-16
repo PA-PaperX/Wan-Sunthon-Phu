@@ -19,7 +19,8 @@ export async function startSession() {
     questions: shuffled,
     currentIndex: 0,
     score: 0,
-    expiresAt: Date.now() + MAX_AGE * 1000
+    expiresAt: Date.now() + MAX_AGE * 1000,
+    userAnswers: []
   };
 
   const cookieStore = await cookies();

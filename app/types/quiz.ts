@@ -11,4 +11,5 @@ export interface SessionData {
   score: number;
   expiresAt: number;
   completed?: boolean;
+  userAnswers: string[];
 }
