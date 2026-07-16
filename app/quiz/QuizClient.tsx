@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { SessionData } from '../types/quiz';
 import { useRouter } from 'next/navigation';
-import GreenScreenVideo from '../components/GreenScreenVideo';
+import FullscreenVideo from '../components/FullscreenVideo';
 
 export default function QuizClient({
   session,
@@ -112,8 +112,8 @@ export default function QuizClient({
         </div>
       )}
 
-      {showVideo === 'win' && <GreenScreenVideo src="/videos/win_greenscreen.mp4" onEnded={() => setShowVideo(null)} />}
-      {showVideo === 'lose' && <GreenScreenVideo src="/videos/lose_greenscreen.mp4" onEnded={() => setShowVideo(null)} />}
+      {showVideo === 'win' && <FullscreenVideo src="/videos/win_normal.mp4" onEnded={() => setShowVideo(null)} />}
+      {showVideo === 'lose' && <FullscreenVideo src="/videos/lose_normal.mp4" onEnded={() => setShowVideo(null)} />}
     </div>
   );
 }
