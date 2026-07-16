@@ -1,15 +1,19 @@
 'use server';
 
 import { cookies } from 'next/headers';
-import { SessionData } from '../types/quiz';
+import { SessionData, Question } from '../types/quiz';
 import accData from '../assets/acc.json';
 
 const COOKIE_NAME = 'quiz_session';
 const MAX_AGE = 300; // 5 minutes
 
 export async function startSession() {
-  const allWords = [...accData.daily_life_words, ...accData.transliterated_words];
-  const shuffled = allWords.sort(() => 0.5 - Math.random()).slice(0, 5);
+  const allWords: Question[] = [...accData.daily_life_words, ...accData.transliterated_words];
+  for (let i = allWords.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [allWords[i], allWords[j]] = [allWords[j], allWords[i]];
+  }
+  const shuffled = allWords.slice(0, 5);
 
   const session: SessionData = {
     questions: shuffled,
@@ -46,8 +50,9 @@ export async function getSession(): Promise<SessionData | null> {
 
 export async function updateSession(session: SessionData) {
   const cookieStore = await cookies();
+  const remainingMs = session.expiresAt - Date.now();
   cookieStore.set(COOKIE_NAME, JSON.stringify(session), {
-    maxAge: MAX_AGE,
+    maxAge: Math.max(0, Math.floor(remainingMs / 1000)),
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     path: '/',
