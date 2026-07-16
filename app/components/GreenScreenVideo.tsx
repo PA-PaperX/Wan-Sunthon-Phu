@@ -20,6 +20,11 @@ export default function GreenScreenVideo({ src, onEnded }: { src: string, onEnde
         return;
       }
 
+      if (video.videoWidth === 0 || video.videoHeight === 0) {
+        animationFrameId = requestAnimationFrame(renderFrame);
+        return;
+      }
+
       if (canvas.width !== video.videoWidth || canvas.height !== video.videoHeight) {
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
