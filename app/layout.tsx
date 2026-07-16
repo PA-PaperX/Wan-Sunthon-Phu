@@ -27,6 +27,10 @@ export default function RootLayout({
       lang="th"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preload" as="video" href="/videos/win_normal.mp4" type="video/mp4" />
+        <link rel="preload" as="video" href="/videos/lose_normal.mp4" type="video/mp4" />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

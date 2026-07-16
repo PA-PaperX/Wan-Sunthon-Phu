@@ -75,7 +75,7 @@ export default function QuizClient({
       userAnswers: [...(latestSessionRef.current.userAnswers || []), word]
     };
     latestSessionRef.current = newSession;
-    await updateSessionAction(newSession);
+    updateSessionAction(newSession).catch(console.error);
   };
 
   const handleVideoEnded = () => {
