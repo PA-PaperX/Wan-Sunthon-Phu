@@ -21,7 +21,7 @@ export default async function QuizPage() {
         <div className="bg-[#F4D068] p-4 text-center">
           <h1 className="text-xl font-bold text-[#8B5A2B]">ตอบคำถามคำผิด - คำถูก</h1>
         </div>
-        <QuizClient session={session} updateSessionAction={updateSessionAction} />
+        <QuizClient key={session.currentIndex} session={session} updateSessionAction={updateSessionAction} />
       </div>
     </main>
   );
