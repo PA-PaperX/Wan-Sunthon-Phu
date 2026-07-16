@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import { SessionData } from '../types/quiz';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -33,6 +33,7 @@ export default function QuizClient({
   updateSessionAction: (newSession: SessionData) => Promise<void>;
 }) {
   const router = useRouter();
+  const [currentIndex, setCurrentIndex] = useState(session.currentIndex);
   const [answered, setAnswered] = useState(false);
   const [selectedWord, setSelectedWord] = useState<string | null>(null);
   const [displayScore, setDisplayScore] = useState(session.score);
@@ -41,20 +42,20 @@ export default function QuizClient({
   const [timeLeft, setTimeLeft] = useState(8);
 
   const latestSessionRef = useRef(session);
-  const question = session.questions[session.currentIndex];
-  const isLastQuestion = session.currentIndex === session.questions.length - 1;
+  const question = session.questions[currentIndex];
+  const isLastQuestion = currentIndex === session.questions.length - 1;
 
-  const [options] = useState(() => {
+  const options = useMemo(() => {
     const wrongAnswers = Array.isArray(question.wrong) ? question.wrong : [question.wrong];
     const all = [question.correct, ...wrongAnswers];
-    let seed = question.id + session.currentIndex * 100;
+    let seed = question.id + currentIndex * 100;
     for (let i = all.length - 1; i > 0; i--) {
       seed = (seed * 9301 + 49297) % 233280;
       const j = Math.floor((seed / 233280) * (i + 1));
       [all[i], all[j]] = [all[j], all[i]];
     }
     return all;
-  });
+  }, [question, currentIndex]);
 
   const handleAnswer = async (word: string) => {
     if (answered) return;
@@ -83,18 +84,26 @@ export default function QuizClient({
     setShowExplanation(true);
   };
 
-  const handleNext = async () => {
+  const handleNext = () => {
     if (isLastQuestion) {
       const finalSession = { ...latestSessionRef.current, completed: true };
-      await updateSessionAction(finalSession);
+      updateSessionAction(finalSession).catch(console.error);
       router.push('/result');
     } else {
+      const nextIndex = currentIndex + 1;
       const nextSession = {
         ...latestSessionRef.current,
-        currentIndex: latestSessionRef.current.currentIndex + 1
+        currentIndex: nextIndex
       };
-      await updateSessionAction(nextSession);
-      router.refresh();
+      latestSessionRef.current = nextSession;
+      
+      setCurrentIndex(nextIndex);
+      setAnswered(false);
+      setSelectedWord(null);
+      setShowExplanation(false);
+      setTimeLeft(8);
+
+      updateSessionAction(nextSession).catch(console.error);
     }
   };
 
@@ -128,7 +137,6 @@ export default function QuizClient({
     'md:hover:bg-[#54A034] md:hover:shadow-[0_8px_0_#458529] active:shadow-[0_0px_0_#458529]',
   ];
 
-  const progressPercentage = ((session.currentIndex) / session.questions.length) * 100;
 
   return (
     <div className="min-h-screen bg-[#FDFBF7] flex flex-col items-center p-4 sm:p-6 md:p-8 text-[#5C4033] font-sans selection:bg-[#F4D068] selection:text-[#5C4033] overflow-hidden">
@@ -142,7 +150,7 @@ export default function QuizClient({
           <div className="flex justify-between items-end mb-2 font-bold text-[#8B5A2B]">
             <div className="flex flex-col">
               <span className="text-xs sm:text-sm uppercase tracking-wider opacity-70">ความคืบหน้า</span>
-              <span className="text-lg sm:text-xl">ข้อที่ {session.currentIndex + 1} / {session.questions.length}</span>
+              <span className="text-lg sm:text-xl">ข้อที่ {currentIndex + 1} / {session.questions.length}</span>
             </div>
             <div className="flex flex-col items-end">
               <span className="text-xs sm:text-sm uppercase tracking-wider opacity-70">คะแนน</span>
@@ -159,8 +167,8 @@ export default function QuizClient({
           <div className="w-full bg-[#F3ECE1] h-3 sm:h-4 rounded-full overflow-hidden shadow-inner">
             <motion.div 
               className="bg-gradient-to-r from-[#F4D068] to-[#D4A373] h-full rounded-full" 
-              initial={{ width: 0 }}
-              animate={{ width: `${progressPercentage}%` }}
+              initial={{ width: `${((currentIndex) / session.questions.length) * 100}%` }}
+              animate={{ width: `${((currentIndex + 1) / session.questions.length) * 100}%` }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             />
           </div>

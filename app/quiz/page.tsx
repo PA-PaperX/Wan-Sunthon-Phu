@@ -16,6 +16,5 @@ export default async function QuizPage() {
     'use server';
     await updateSession(newSession);
   }
-
-  return <QuizClient key={session.currentIndex} session={session} updateSessionAction={updateSessionAction} />;
+  return <QuizClient session={session} updateSessionAction={updateSessionAction} />;
 }
