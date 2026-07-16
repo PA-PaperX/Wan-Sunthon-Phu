@@ -28,6 +28,7 @@ export async function startSession() {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     path: '/',
+    sameSite: 'lax',
   });
 }
 
@@ -56,6 +57,7 @@ export async function updateSession(session: SessionData) {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     path: '/',
+    sameSite: 'lax',
   });
 }
 

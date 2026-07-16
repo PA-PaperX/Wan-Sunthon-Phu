@@ -10,4 +10,5 @@ export interface SessionData {
   currentIndex: number;
   score: number;
   expiresAt: number;
+  completed?: boolean;
 }

@@ -10,6 +10,8 @@ export default async function QuizPage() {
     redirect('/');
   }
 
+  if (session.completed) redirect('/result');
+
   async function updateSessionAction(newSession: SessionData) {
     'use server';
     await updateSession(newSession);

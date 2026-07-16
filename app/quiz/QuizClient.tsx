@@ -14,6 +14,7 @@ export default function QuizClient({
   const router = useRouter();
   const [answered, setAnswered] = useState(false);
   const [selectedWord, setSelectedWord] = useState<string | null>(null);
+  const [displayScore, setDisplayScore] = useState(session.score);
 
   const question = session.questions[session.currentIndex];
   const isLastQuestion = session.currentIndex === session.questions.length - 1;
@@ -30,6 +31,8 @@ export default function QuizClient({
     setAnswered(true);
 
     const isCorrect = word === question.correct;
+    if (isCorrect) setDisplayScore(s => s + 1);
+
     const newSession = {
       ...session,
       score: isCorrect ? session.score + 1 : session.score
@@ -40,6 +43,7 @@ export default function QuizClient({
 
   const handleNext = async () => {
     if (isLastQuestion) {
+      await updateSessionAction({ ...session, score: displayScore, completed: true });
       router.push('/result');
     } else {
       const newSession = {
@@ -48,9 +52,6 @@ export default function QuizClient({
       };
       await updateSessionAction(newSession);
 
-      // Reset state for next question
-      setAnswered(false);
-      setSelectedWord(null);
       router.refresh();
     }
   };
@@ -59,13 +60,13 @@ export default function QuizClient({
     <div className="p-6">
       <div className="mb-6 flex justify-between items-center text-[#996515] font-bold">
         <span>ข้อที่ {session.currentIndex + 1} / {session.questions.length}</span>
-        <span>คะแนน: {session.score}</span>
+        <span>คะแนน: {displayScore}</span>
       </div>
 
       <h2 className="text-2xl text-center font-bold mb-8 text-[#8B5A2B]">คำไหนเขียนถูก?</h2>
 
       <div className="flex flex-col gap-4">
-        {options.map((word, idx) => {
+        {options.map((word) => {
           let btnClass = "bg-white border-2 border-[#F4D068] text-[#8B5A2B]";
           if (answered) {
             if (word === question.correct) btnClass = "bg-green-500 border-green-600 text-white";
@@ -75,7 +76,7 @@ export default function QuizClient({
 
           return (
             <button
-              key={idx}
+              key={word}
               onClick={() => handleAnswer(word)}
               disabled={answered}
               className={`py-4 px-6 rounded-xl text-xl font-bold transition-all shadow-md ${btnClass}`}
