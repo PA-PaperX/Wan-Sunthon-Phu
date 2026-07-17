@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import confetti from 'canvas-confetti';
 import { SessionData } from '../types/quiz';
+import Link from 'next/link';
 
 export default function AnimatedResult({ 
   session, 
@@ -101,16 +102,29 @@ export default function AnimatedResult({
            'พยายามอีกนิด! ภาษาไทยไม่ยากอย่างที่คิด ✌️'}
         </motion.p>
 
-        <form action={onPlayAgain} className="w-full">
-          <motion.button
-            type="submit"
-            className="inline-block w-full bg-gradient-to-r from-[#996515] to-[#8B5A2B] hover:from-[#8B5A2B] hover:to-[#6E4823] text-white font-bold py-4 px-8 rounded-full text-xl shadow-[0_8px_20px_rgba(139,90,43,0.3)] transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            เล่นอีกครั้ง
-          </motion.button>
-        </form>
+        <div className="flex flex-col sm:flex-row gap-4 w-full">
+          <form action={onPlayAgain} className="w-full sm:w-1/2">
+            <motion.button
+              type="submit"
+              className="inline-block w-full bg-gradient-to-r from-[#996515] to-[#8B5A2B] hover:from-[#8B5A2B] hover:to-[#6E4823] text-white font-bold py-4 px-8 rounded-full text-lg sm:text-xl shadow-[0_8px_20px_rgba(139,90,43,0.3)] transition-all h-full"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              เล่นอีกครั้ง
+            </motion.button>
+          </form>
+          
+          <Link href="/credits" className="w-full sm:w-1/2">
+            <motion.button
+              type="button"
+              className="inline-block w-full bg-white border-2 border-[#8B5A2B] text-[#8B5A2B] hover:bg-[#FDFBF7] font-bold py-4 px-8 rounded-full text-lg sm:text-xl shadow-[0_8px_20px_rgba(139,90,43,0.1)] transition-all h-full"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              ผู้จัดทำ
+            </motion.button>
+          </Link>
+        </div>
       </motion.div>
 
       <div className="max-w-xl w-full space-y-6 relative z-10">
