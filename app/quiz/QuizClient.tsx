@@ -7,13 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import TransparentVideo from '../components/TransparentVideo';
 import { updateSession } from '../lib/session';
 
-const ShapeIcon = ({ index, className = "" }: { index: number, className?: string }) => {
-  const shapes = [
-    <polygon key="triangle" points="12 2 22 20 2 20" fill="currentColor" strokeLinejoin="round" />,
-    <polygon key="diamond" points="12 2 22 12 12 22 2 12" fill="currentColor" strokeLinejoin="round" />,
-    <circle key="circle" cx="12" cy="12" r="10" fill="currentColor" />,
-    <rect key="square" x="3" y="3" width="18" height="18" fill="currentColor" rx="4" />,
-  ];
+const ChoiceIcon = ({ index, className = "" }: { index: number, className?: string }) => {
+  const letters = ["ก", "ข", "ค", "ง"];
   return (
     <motion.svg 
       viewBox="0 0 24 24" 
@@ -21,7 +16,9 @@ const ShapeIcon = ({ index, className = "" }: { index: number, className?: strin
       animate={{ y: [0, -8, 0], rotate: [0, 5, -5, 0] }}
       transition={{ duration: 4 + (index % 2), repeat: Infinity, ease: "easeInOut" }}
     >
-      {shapes[index % shapes.length]}
+      <text x="12" y="12" fontSize="16" fontWeight="900" fontFamily="sans-serif" textAnchor="middle" dominantBaseline="central" fill="currentColor">
+        {letters[index % letters.length]}
+      </text>
     </motion.svg>
   );
 };
@@ -271,12 +268,12 @@ export default function QuizClient({
                 style={{ transformStyle: 'preserve-3d' }}
               >
                 <div className={`absolute -right-4 -bottom-4 sm:-right-6 sm:-bottom-6 transition-colors duration-300 ${iconStateClasses}`}>
-                  <ShapeIcon index={index} className="w-32 h-32 sm:w-48 sm:h-48 transform -rotate-12" />
+                  <ChoiceIcon index={index} className="w-32 h-32 sm:w-48 sm:h-48 transform -rotate-12" />
                 </div>
                 
                 <div className="relative z-10 flex items-center w-full gap-4 sm:gap-6 pointer-events-none" style={{ transform: 'translateZ(20px)' }}>
                   <div className="flex-shrink-0 bg-white/20 rounded-xl p-3 shadow-inner backdrop-blur-sm">
-                    <ShapeIcon index={index} className="text-white drop-shadow-md" />
+                    <ChoiceIcon index={index} className="text-white drop-shadow-md" />
                   </div>
                   <span className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wide drop-shadow-md text-left leading-tight break-words">
                     {word}
