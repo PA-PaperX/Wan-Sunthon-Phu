@@ -56,6 +56,16 @@ export default function QuizClient({
     return all;
   }, [question, currentIndex]);
 
+  const hintText = useMemo(() => {
+    if (!question.explanation) return "";
+    let text = question.explanation;
+    const sortedOptions = [...options].sort((a, b) => b.length - a.length);
+    sortedOptions.forEach(opt => {
+      text = text.split(opt).join('___');
+    });
+    return text;
+  }, [question.explanation, options]);
+
   const handleAnswer = async (word: string) => {
     if (answered) return;
     setSelectedWord(word);
@@ -197,7 +207,7 @@ export default function QuizClient({
             คำไหนเขียนถูก?
           </h2>
           
-          {question.explanation && (
+          {hintText && (
             <motion.div
               className="bg-white/80 backdrop-blur-sm border border-[#F4D068] shadow-inner rounded-2xl p-4 sm:p-6 max-w-2xl text-center mx-4"
               initial={{ opacity: 0, y: 10 }}
@@ -206,7 +216,7 @@ export default function QuizClient({
             >
               <p className="text-[#8B5A2B] text-base sm:text-lg md:text-xl font-medium leading-relaxed">
                 <span className="font-bold text-[#996515] mr-2">คำใบ้ความหมาย:</span> 
-                {question.explanation}
+                {hintText}
               </p>
             </motion.div>
           )}
