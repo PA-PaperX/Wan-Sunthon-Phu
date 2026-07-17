@@ -193,9 +193,23 @@ export default function QuizClient({
               />
             </motion.div>
           )}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center text-[#5C4033] leading-tight drop-shadow-sm tracking-wide">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center text-[#5C4033] leading-tight drop-shadow-sm tracking-wide mb-4">
             คำไหนเขียนถูก?
           </h2>
+          
+          {question.explanation && (
+            <motion.div
+              className="bg-white/80 backdrop-blur-sm border border-[#F4D068] shadow-inner rounded-2xl p-4 sm:p-6 max-w-2xl text-center mx-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <p className="text-[#8B5A2B] text-base sm:text-lg md:text-xl font-medium leading-relaxed">
+                <span className="font-bold text-[#996515] mr-2">คำใบ้ความหมาย:</span> 
+                {question.explanation}
+              </p>
+            </motion.div>
+          )}
         </motion.div>
 
         <div className={`grid gap-4 sm:gap-6 w-full ${options.length > 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 md:grid-cols-2'}`}>
