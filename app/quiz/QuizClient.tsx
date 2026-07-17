@@ -57,8 +57,9 @@ export default function QuizClient({
   }, [question, currentIndex]);
 
   const hintText = useMemo(() => {
-    if (!question.explanation) return "";
-    let text = question.explanation;
+    const baseText = question.hint || question.explanation;
+    if (!baseText) return "";
+    let text = baseText;
     const sortedOptions = [...options].sort((a, b) => b.length - a.length);
     sortedOptions.forEach(opt => {
       text = text.split(opt).join('___');

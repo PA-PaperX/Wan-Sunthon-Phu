@@ -9,7 +9,8 @@
         "กระเพา"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ชื่อไม้ล้มลุกชนิด Ocimum tenuiflorum L. ใบมีกลิ่นฉุน ใช้ปรุงอาหาร.",
-      "imageUrl": "https://i.pinimg.com/736x/92/68/27/926827116459f2b5d412c861c9787eab.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/92/68/27/926827116459f2b5d412c861c9787eab.jpg",
+      "hint": "ชื่อพืชสมุนไพร ใบมีกลิ่นฉุน นิยมนำมาผัดกับเนื้อสัตว์"
     },
     {
       "id": 2,
@@ -20,7 +21,8 @@
         "สังเกตติ"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. กำหนดไว้, หมายไว้, ดูอย่างเอาใจใส่, เช่น สังเกตกิริยาท่าทาง.",
-      "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3Z5MDFqcHM4NG9tM2poMjBkcmZ6cnAxazR6MzUzamFlYTBkN2syayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SYABnw07wJsV7G8ju5/giphy.gif"
+      "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3Z5MDFqcHM4NG9tM2poMjBkcmZ6cnAxazR6MzUzamFlYTBkN2syayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SYABnw07wJsV7G8ju5/giphy.gif",
+      "hint": "การดูอย่างเอาใจใส่, กำหนดไว้, หมายไว้"
     },
     {
       "id": 3,
@@ -31,7 +33,8 @@
         "อณุญาต"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. ยินยอม, ยอมให้, ตกลง.",
-      "imageUrl": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnRwamRjM293dGEwbWpsM2xub3IwdWY1a2cxcnRiNXVkN3dzcjc5MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eoFJSruUWf7qq1zNHD/giphy.gif"
+      "imageUrl": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnRwamRjM293dGEwbWpsM2xub3IwdWY1a2cxcnRiNXVkN3dzcjc5MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eoFJSruUWf7qq1zNHD/giphy.gif",
+      "hint": "ยินยอม, ตกลง, ยอมให้ทำ"
     },
     {
       "id": 4,
@@ -42,7 +45,8 @@
         "กะทันหันต์"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ว. จวนแจ, ปัจจุบันทันด่วน, ทันทีทันใด, เช่น เกิดโรคกะทันหัน.",
-      "imageUrl": ""
+      "imageUrl": "",
+      "hint": "ปัจจุบันทันด่วน, เกิดขึ้นทันทีทันใด"
     },
     {
       "id": 5,
@@ -53,7 +57,8 @@
         "ไขมุก"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. วัตถุมีค่า มีลักษณะกลม ๆ สีขาว หรือสีต่าง ๆ เกิดในตัวหอยมุกบางชนิด ใช้ทำเครื่องประดับ.",
-      "imageUrl": "https://i.pinimg.com/736x/38/ba/e5/38bae560adac7cd3cbcbcd71a98757a1.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/38/ba/e5/38bae560adac7cd3cbcbcd71a98757a1.jpg",
+      "hint": "อัญมณีลักษณะกลมๆ ที่เกิดในตัวหอยบางชนิด"
     },
     {
       "id": 6,
@@ -64,7 +69,8 @@
         "ผูกพรรณ"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. มีความเป็นห่วงใยเกี่ยวพันถึงกัน, รักใคร่และผูกใจต่อกัน.",
-      "imageUrl": ""
+      "imageUrl": "",
+      "hint": "รักใคร่และผูกใจต่อกัน, มีความเป็นห่วงใยถึงกัน"
     },
     {
       "id": 7,
@@ -75,7 +81,8 @@
         "โอกาษ"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ช่อง, ทาง, เวลาที่เหมาะ, จังหวะ.",
-      "imageUrl": ""
+      "imageUrl": "",
+      "hint": "จังหวะ, เวลาที่เหมาะ, ช่องทาง"
     },
     {
       "id": 8,
@@ -86,7 +93,8 @@
         "อากาศย์"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. แก๊สที่หุ้มห่อโลก, ท้องฟ้า, พื้นเบื้องบน.",
-      "imageUrl": "https://i.pinimg.com/736x/e7/e6/e3/e7e6e3c19912fe3d9c9012c858fbb51a.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/e7/e6/e3/e7e6e3c19912fe3d9c9012c858fbb51a.jpg",
+      "hint": "แก๊สที่หุ้มห่อโลก, สิ่งที่เราใช้หายใจ"
     },
     {
       "id": 9,
@@ -97,7 +105,8 @@
         "ลายเซ็นต"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ลายมือชื่อที่เขียนไว้เป็นสำคัญ.",
-      "imageUrl": "https://i.pinimg.com/736x/fd/9f/8b/fd9f8be9108ccf1254deebb0d70b3cce.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/fd/9f/8b/fd9f8be9108ccf1254deebb0d70b3cce.jpg",
+      "hint": "ลายมือชื่อที่เขียนไว้เป็นสำคัญ"
     },
     {
       "id": 10,
@@ -108,7 +117,8 @@
         "กทิ"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. นํ้าที่คั้นจากมะพร้าวขูด, เรียกสิ่งที่เป็นยอดเยี่ยมในพวกเดียวกันว่า หัวกะทิ.",
-      "imageUrl": "https://i.pinimg.com/1200x/b8/2a/07/b82a07b33794db3e73ac3eb53a28a99e.jpg"
+      "imageUrl": "https://i.pinimg.com/1200x/b8/2a/07/b82a07b33794db3e73ac3eb53a28a99e.jpg",
+      "hint": "น้ำสีขาวที่คั้นจากมะพร้าวขูด"
     },
     {
       "id": 11,
@@ -119,7 +129,8 @@
         "กพริบ"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. ปิดและเปิดหนังตาโดยเร็ว.",
-      "imageUrl": "https://i.pinimg.com/736x/a8/40/05/a84005961662a5f554512ac39fe1794d.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/a8/40/05/a84005961662a5f554512ac39fe1794d.jpg",
+      "hint": "อาการปิดและเปิดหนังตาโดยเร็ว"
     },
     {
       "id": 12,
@@ -130,7 +141,8 @@
         "สรรปะรด"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ชื่อไม้ล้มลุกชนิด Ananas comosus ผลมีตาโดยรอบ กินได้.",
-      "imageUrl": "https://i.pinimg.com/1200x/1d/3d/c7/1d3dc77a420dc32d7355ab81379f6296.jpg"
+      "imageUrl": "https://i.pinimg.com/1200x/1d/3d/c7/1d3dc77a420dc32d7355ab81379f6296.jpg",
+      "hint": "ผลไม้ชนิดหนึ่ง ผลมีตาโดยรอบ รสเปรี้ยวอมหวาน"
     },
     {
       "id": 13,
@@ -141,7 +153,8 @@
         "ศีระษะ"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. หัว (ใช้ประกอบคำสุภาพ).",
-      "imageUrl": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/145B/production/_99011250_05864b3d-00c0-40a7-95eb-77bd9592ed03.jpg.webp"
+      "imageUrl": "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/145B/production/_99011250_05864b3d-00c0-40a7-95eb-77bd9592ed03.jpg.webp",
+      "hint": "คำสุภาพที่ใช้เรียกส่วนบนสุดของร่างกาย (หัว)"
     },
     {
       "id": 14,
@@ -152,7 +165,8 @@
         "ปรากฏิ"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. สำแดงออกมาให้เห็น, มีให้เห็น, เช่น ปรากฏตัว.",
-      "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.8uydFkMNtVw9wx3rZSWbuAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.8uydFkMNtVw9wx3rZSWbuAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "hint": "แสดงออกมาให้เห็น, มีให้เห็น"
     },
     {
       "id": 15,
@@ -163,7 +177,8 @@
         "กดหมาย"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. กฎเกณฑ์ที่ผู้มีอำนาจตราขึ้นเพื่อใช้บังคับบุคคลให้ปฏิบัติตาม.",
-      "imageUrl": "https://tse2.mm.bing.net/th/id/OIP.laSCZh9d7jUZGzT1qNY0gwHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      "imageUrl": "https://tse2.mm.bing.net/th/id/OIP.laSCZh9d7jUZGzT1qNY0gwHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "hint": "กฎเกณฑ์ที่ผู้มีอำนาจตราขึ้นเพื่อใช้บังคับบุคคลในสังคม"
     },
     {
       "id": 16,
@@ -174,7 +189,8 @@
         "อัญชรร"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ชื่อไม้เถาชนิด Clitoria ternatea L. ดอกสีนํ้าเงิน ม่วง หรือ ขาว.",
-      "imageUrl": "https://i.pinimg.com/736x/96/a1/c4/96a1c456fa3a563072421e7cb7b902c0.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/96/a1/c4/96a1c456fa3a563072421e7cb7b902c0.jpg",
+      "hint": "ชื่อไม้เถา ดอกสีน้ำเงิน ม่วง หรือขาว นิยมนำมาคั้นน้ำสีฟ้า"
     },
     {
       "id": 17,
@@ -185,7 +201,8 @@
         "มุกตลบ"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. คำพูดหรือการแสดงที่ทำให้ขบขัน.",
-      "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmJmcnB6ejV5bWd4ZXp3MXlrZDU1Mm1ieGNqcTIyY3MyMjMwaGl1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WBSTdAk7W2Dng0vXa7/giphy.gif"
+      "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmJmcnB6ejV5bWd4ZXp3MXlrZDU1Mm1ieGNqcTIyY3MyMjMwaGl1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WBSTdAk7W2Dng0vXa7/giphy.gif",
+      "hint": "คำพูดหรือการแสดงที่ทำให้ขบขัน"
     },
     {
       "id": 18,
@@ -196,7 +213,8 @@
         "รศชาติ"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. รส (มักใช้แก่ อาหาร), เช่น อาหารอร่อยมีรสชาติ.",
-      "imageUrl": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjkzdXcwb2QyODlnZHdmam5hdHdiaWg4cXg3aWdibXJ4aGtxZGU2ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8Odq0zzKM596g/giphy.gif"
+      "imageUrl": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjkzdXcwb2QyODlnZHdmam5hdHdiaWg4cXg3aWdibXJ4aGtxZGU2ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8Odq0zzKM596g/giphy.gif",
+      "hint": "รสของอาหาร ความอร่อย"
     },
     {
       "id": 19,
@@ -207,7 +225,8 @@
         "บิณฑบาท"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. กิริยาที่พระภิกษุสามเณรรับของที่เขานำมาใส่บาตร.",
-      "imageUrl": "https://i.pinimg.com/736x/4a/33/ca/4a33ca01c762d1a17cf3800a880bd997.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/4a/33/ca/4a33ca01c762d1a17cf3800a880bd997.jpg",
+      "hint": "กิริยาที่พระภิกษุรับของที่ชาวบ้านนำมาใส่ถาดหรือภาชนะของพระ"
     },
     {
       "id": 20,
@@ -218,7 +237,8 @@
         "ฉอุ่ม"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ว. ชุ่ม, สดชื่น, (มักใช้ประกอบคำ เขียว เป็น เขียวชอุ่ม).",
-      "imageUrl": ""
+      "imageUrl": "",
+      "hint": "ชุ่ม, สดชื่น (มักใช้คู่กับคำว่า เขียว)"
     },
     {
       "id": 21,
@@ -229,7 +249,8 @@
         "อานิสงฆ์"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ผลแห่งกุศล, ผลบุญ, ประโยชน์ที่เกิดจากการทำบุญ.",
-      "imageUrl": "https://image.bangkokbiznews.com/uploads/images/md/2022/01/FBHoAPseN0LAzLxhIos0.webp"
+      "imageUrl": "https://image.bangkokbiznews.com/uploads/images/md/2022/01/FBHoAPseN0LAzLxhIos0.webp",
+      "hint": "ผลแห่งกุศล, ประโยชน์ที่เกิดจากการทำบุญ"
     },
     {
       "id": 22,
@@ -240,7 +261,8 @@
         "นกอินที"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ชื่อนกขนาดใหญ่ในวงศ์ Accipitridae เป็นนกล่าเหยื่อ.",
-      "imageUrl": "https://i.pinimg.com/1200x/01/f1/28/01f1285a0616251f268e9fc02c359bc1.jpg"
+      "imageUrl": "https://i.pinimg.com/1200x/01/f1/28/01f1285a0616251f268e9fc02c359bc1.jpg",
+      "hint": "นกขนาดใหญ่ เป็นนกล่าเหยื่อที่มีสายตาคมกริบ"
     },
     {
       "id": 23,
@@ -251,7 +273,8 @@
         "ทนุถนอม"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. คอยระวังรักษา, เลี้ยงดูอย่างระมัดระวัง.",
-      "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.q27bD9tpQ01Me9P9lnYzhgHaJ4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.q27bD9tpQ01Me9P9lnYzhgHaJ4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "hint": "คอยระวังรักษา, เลี้ยงดูอย่างระมัดระวัง"
     },
     {
       "id": 24,
@@ -262,7 +285,8 @@
         "ทอยอย"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. อาการที่ไปหรือมาทีละน้อย หรือ ทำเรื่อย ๆ ไปจนกว่าจะหมด.",
-      "imageUrl": ""
+      "imageUrl": "",
+      "hint": "อาการที่ไปหรือมาทีละน้อย หรือทำเรื่อยๆ"
     },
     {
       "id": 25,
@@ -273,7 +297,8 @@
         "คิลนิก"
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. สถานพยาบาลที่ไม่รับผู้ป่วยค้างคืน (ยืมจากภาษาอังกฤษ clinic).",
-      "imageUrl": "https://pic.pikbest.com/02/18/94/99J888piCVdK.jpg!bw700"
+      "imageUrl": "https://pic.pikbest.com/02/18/94/99J888piCVdK.jpg!bw700",
+      "hint": "สถานพยาบาลที่ไม่รับผู้ป่วยค้างคืน"
     }
   ],
   "transliterated_words": [
@@ -287,7 +312,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ของกินทำด้วยเนื้อหมูต้ม ปรุงรส ผัดจนแห้งและขยี้ให้เป็นฝอย.",
       "imageUrl": "https://i.pinimg.com/1200x/c7/62/04/c76204101ccbf831eba45ab3f5cc3892.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "ของกินทำด้วยเนื้อหมูต้ม ปรุงรส ผัดจนแห้งและขยี้ให้เป็นฝอย"
     },
     {
       "id": 27,
@@ -299,7 +325,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. อาหารชนิดหนึ่ง ใช้ก๋วยเตี๋ยวเส้นเล็กผัดกับเครื่องปรุงต่างๆ.",
       "imageUrl": "https://i.pinimg.com/1200x/5e/8a/d6/5e8ad60b412d5ee4667f3715ed1bb64a.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "อาหารเส้นผัดชนิดหนึ่ง ใส่ถั่วงอก ไข่ กุ้งแห้งหรือเต้าหู้"
     },
     {
       "id": 28,
@@ -311,7 +338,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ชื่ออาหารอีสานชนิดหนึ่ง ทำจากหน่อไม้ต้ม ขูดเป็นเส้น คลุกเครื่องปรุง.",
       "imageUrl": "https://img.kapook.com/u/2016/surauch/cook1/soupspicy.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "อาหารอีสานรสจัดจ้าน ทำจากหน่อไม้ต้มขูดเป็นเส้น"
     },
     {
       "id": 29,
@@ -323,7 +351,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. ปรับให้เป็นปัจจุบัน, ทำให้ทันสมัย (ทับศัพท์จาก update).",
       "imageUrl": "https://www.partitionwizard.com/images/uploads/articles/2021/10/valorant-fps-drops-windows-11-10/valorant-fps-drops-windows-11-10-1.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "ปรับให้เป็นปัจจุบัน, ทำให้ทันสมัย"
     },
     {
       "id": 30,
@@ -335,7 +364,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ภาพยนตร์หรือรายการที่ออกอากาศต่อเนื่องกัน (ทับศัพท์จาก series).",
       "imageUrl": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWZvMzVubWg0aHE2c20xcXZtanVleGZxYzBtdzhjb3JoMzVybjcyNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RGdzhgt7mK811ynXdS/giphy.gif",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "ภาพยนตร์หรือรายการที่ออกอากาศต่อเนื่องกันเป็นตอนๆ"
     },
     {
       "id": 31,
@@ -347,7 +377,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. กดปุ่มที่เมาส์ (ทับศัพท์จาก click).",
       "imageUrl": "https://i.pinimg.com/736x/c4/51/ae/c451ae161b976914500b88a51d4d2b6b.jpg",
-      "hasWiki": false
+      "hasWiki": false,
+      "hint": "การกดปุ่มที่อุปกรณ์ควบคุมบนคอมพิวเตอร์"
     },
     {
       "id": 32,
@@ -359,7 +390,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ว. อร่อย, รสดี (ภาษาถิ่นอีสาน).",
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3ZhzfmNxaOAyIEIjdT6yQ4VnaH25iSzyPN-xP0qxHHSST8Y090g4NRqg&s=10",
-      "hasWiki": false
+      "hasWiki": false,
+      "hint": "คำภาษาถิ่นอีสาน แปลว่า อร่อย, รสดี"
     },
     {
       "id": 33,
@@ -371,7 +403,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. การจำกัดจำนวนโดยวางกฎเกณฑ์ไว้ (ทับศัพท์จาก quota).",
       "imageUrl": "",
-      "hasWiki": false
+      "hasWiki": false,
+      "hint": "การจำกัดจำนวนโดยวางกฎเกณฑ์ไว้"
     },
     {
       "id": 34,
@@ -383,7 +416,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ว. เชิงตัวเลข, เกี่ยวกับตัวเลข (ทับศัพท์จาก digital).",
       "imageUrl": "https://i.pinimg.com/1200x/ac/d4/90/acd4906f82576eecd3114d7acfee6575.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "เชิงตัวเลข, เกี่ยวกับเทคโนโลยีสมัยใหม่ที่ตรงข้ามกับแอนะล็อก"
     },
     {
       "id": 35,
@@ -395,7 +429,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. โปรแกรมประยุกต์ (ทับศัพท์จาก application).",
       "imageUrl": "https://i.pinimg.com/736x/29/90/21/29902138fb2589e1223ed0f61de2f50c.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "โปรแกรมประยุกต์บนสมาร์ตโฟนหรือคอมพิวเตอร์"
     },
     {
       "id": 36,
@@ -407,7 +442,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. หน้าที่, การทำงาน (ทับศัพท์จาก function).",
       "imageUrl": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3g0am9kbXQ3azhjaGwxdXBmbGptc2ljdzJ6NTlxeXpvdm5iMWMwYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UKkes2qN2T70s/giphy.gif",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "หน้าที่, การทำงานของสิ่งต่างๆ ทางคณิตศาสตร์หรือคอมพิวเตอร์"
     },
     {
       "id": 37,
@@ -419,7 +455,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. เครือข่ายคอมพิวเตอร์ที่เชื่อมโยงถึงกันทั่วโลก (ทับศัพท์จาก internet).",
       "imageUrl": "https://i.pinimg.com/736x/60/1f/02/601f02ad063c64174598adcdc5a3ef34.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "เครือข่ายคอมพิวเตอร์ที่เชื่อมโยงถึงกันทั่วโลก"
     },
     {
       "id": 38,
@@ -431,7 +468,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. จุดเชื่อมโยง, รหัสเชื่อมโยง (ทับศัพท์จาก link).",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Chain_link_icon_slanted.png",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "จุดเชื่อมโยงบนเว็บไซต์ที่กดแล้วไปยังหน้าอื่นได้"
     },
     {
       "id": 39,
@@ -443,7 +481,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. พืชชนิด Daucus carota รากสีส้ม กินได้ (ทับศัพท์จาก carrot).",
       "imageUrl": "https://i.pinimg.com/736x/6d/bb/ee/6dbbee2a1939501b4dd835c2e7feb7f6.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "พืชผักกินราก มีสีส้ม อุดมด้วยวิตามินเอ"
     },
     {
       "id": 40,
@@ -455,7 +494,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. พืชผักชนิดหนึ่ง มีดอกสีเขียวแน่น (ทับศัพท์จาก broccoli).",
       "imageUrl": "https://i.pinimg.com/1200x/a1/76/80/a176803410c5387123ab9940df22b4c4.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "พืชผักชนิดหนึ่ง มีลักษณะเป็นช่อดอกสีเขียวแน่น"
     },
     {
       "id": 41,
@@ -467,7 +507,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. เส้นหมี่แบบอิตาลี (ทับศัพท์จาก spaghetti).",
       "imageUrl": "https://i.pinimg.com/736x/7f/ca/87/7fca8779cefce45ca9df0e677c4cfd12.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "อาหารเส้นแบบอิตาลี นิยมราดด้วยซอสต่างๆ"
     },
     {
       "id": 42,
@@ -479,7 +520,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ชื่อเครือข่ายสังคมออนไลน์ (ทับศัพท์จาก facebook).",
       "imageUrl": "https://i.pinimg.com/1200x/f3/8e/53/f38e53a74db177e044edbb09e494fb4a.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "ชื่อเครือข่ายสังคมออนไลน์ยอดนิยมสีฟ้า"
     },
     {
       "id": 43,
@@ -491,7 +533,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. ประกาศข้อความ, ส่งข้อความบนอินเทอร์เน็ต (ทับศัพท์จาก post).",
       "imageUrl": "https://i.pinimg.com/1200x/0b/83/87/0b8387a878143b82c5c016c615fbf010.jpg",
-      "hasWiki": false
+      "hasWiki": false,
+      "hint": "การประกาศหรือส่งข้อความ ภาพ ลงบนอินเทอร์เน็ต"
     },
     {
       "id": 44,
@@ -503,7 +546,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ธนาคาร, ธนบัตร (ทับศัพท์จาก bank).",
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-CHtyahCZ-u1l5xFzLWm0kiaXKRYim6WjDlPJ3shEjcgNt2sSo9KFViaB&s=10",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "สถาบันการเงิน หรือเรียกธนบัตรที่ใช้จ่าย"
     },
     {
       "id": 45,
@@ -515,7 +559,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. แม่พิมพ์, หรือ การเขียนบทความบนเว็บ (ทับศัพท์จาก block/blog).",
       "imageUrl": "https://www.ruangsangthai.com/sites/14252/files/s/products/o_1gcln7f80qqrm6m1h9ktjdb9kc.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "การเขียนบทความบันทึกเรื่องราวบนเว็บไซต์"
     },
     {
       "id": 46,
@@ -527,7 +572,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. ข้อคิดเห็น, คำวิจารณ์ (ทับศัพท์จาก comment).",
       "imageUrl": "https://i.pinimg.com/originals/7e/8d/dc/7e8ddcfcac418fa62dc34e0f0d504274.jpg",
-      "hasWiki": false
+      "hasWiki": false,
+      "hint": "ข้อคิดเห็น, คำวิจารณ์ที่พิมพ์โต้ตอบกันบนโลกออนไลน์"
     },
     {
       "id": 47,
@@ -539,7 +585,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ว. เกี่ยวกับศิลปะการขีดเขียนหรือวาดภาพ (ทับศัพท์จาก graphic).",
       "imageUrl": "https://tse2.mm.bing.net/th/id/OIP.8Mlj8VjqzsgMvLxjdGjxHgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
-      "hasWiki": false
+      "hasWiki": false,
+      "hint": "สิ่งที่เกี่ยวกับศิลปะการออกแบบ ขีดเขียนหรือวาดภาพ"
     },
     {
       "id": 48,
@@ -551,7 +598,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. โครงสร้างพื้นฐาน, เวที (ทับศัพท์จาก platform).",
       "imageUrl": "",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "โครงสร้างพื้นฐาน, ระบบ หรือเวทีสำหรับให้บริการทางดิจิทัล"
     },
     {
       "id": 49,
@@ -563,7 +611,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: น. อุปกรณ์คอมพิวเตอร์รูปร่างคล้ายหนู (ทับศัพท์จาก mouse).",
       "imageUrl": "https://i.pinimg.com/736x/89/00/99/890099c022cc0003ef2c3dff73eb07e6.jpg",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "อุปกรณ์คอมพิวเตอร์สำหรับชี้และคลิก"
     },
     {
       "id": 50,
@@ -575,7 +624,8 @@
       ],
       "explanation": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔: ก. ส่งข้อความสั้นๆ ทางเครือข่าย Twitter (ทับศัพท์จาก tweet).",
       "imageUrl": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHNoejE2YTJrNm5udmVtc2g1ZWprdzd6YTBrOHhrNzhreWF6Y29nNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oocwmxwaXfbcTCbP2X/giphy.gif",
-      "hasWiki": true
+      "hasWiki": true,
+      "hint": "การส่งข้อความสั้นๆ ทางเครือข่ายสังคมออนไลน์รูปนกสีฟ้า"
     }
   ],
   "controversial_words": [
@@ -588,7 +638,8 @@
         "น้ำแข็งไซ"
       ],
       "explanation": "พจนานุกรมฯ: ไส แปลว่า เลื่อนไปมาบนเครื่องไส (น้ำแข็งไส คือน้ำแข็งที่ถูกไสให้เป็นฝอย ไม่ใช่น้ำแข็งที่ใสสะอาด)",
-      "imageUrl": "https://i.pinimg.com/1200x/67/e2/84/67e2848f691113c49c1ead98d6837e49.jpg"
+      "imageUrl": "https://i.pinimg.com/1200x/67/e2/84/67e2848f691113c49c1ead98d6837e49.jpg",
+      "hint": "ของหวานทำจากน้ำแข็งที่ถูกขูดให้เป็นฝอย ราดน้ำหวาน"
     },
     {
       "id": 52,
@@ -599,7 +650,8 @@
         "ก๋วยจับ"
       ],
       "explanation": "พจนานุกรมฯ: ราชบัณฑิตยสภาระบุให้ใช้ 'กวยจั๊บ' (เป็นคำยืมภาษาจีนที่ออกเสียงตรีอยู่แล้ว ไม่ต้องใส่วรรณยุกต์จัตวา)",
-      "imageUrl": "https://tse4.mm.bing.net/th/id/OIP.3pUb9WowNtGpYbj9ZllecAHaE9?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      "imageUrl": "https://tse4.mm.bing.net/th/id/OIP.3pUb9WowNtGpYbj9ZllecAHaE9?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "hint": "อาหารประเภทเส้นชนิดหนึ่ง มักกินกับน้ำซุปและเครื่องใน"
     },
     {
       "id": 53,
@@ -609,7 +661,8 @@
         "นะค๊ะ",
         "นะคร้า"
       ],
-      "explanation": "พจนานุกรมฯ: 'นะคะ' เป็นเสียงตรี (นะ) และเสียงตรี (คะ) ใช้สำหรับบอกเล่าหรือตอบรับ ส่วน 'นะค่ะ' เป็นการเขียนผิดหลักภาษา"
+      "explanation": "พจนานุกรมฯ: 'นะคะ' เป็นเสียงตรี (นะ) และเสียงตรี (คะ) ใช้สำหรับบอกเล่าหรือตอบรับ ส่วน 'นะค่ะ' เป็นการเขียนผิดหลักภาษา",
+      "hint": "คำลงท้ายเสียงตรี ใช้สำหรับบอกเล่าหรือตอบรับของผู้หญิง"
     },
     {
       "id": 54,
@@ -620,7 +673,8 @@
         "ภาพยตร์"
       ],
       "explanation": "พจนานุกรมฯ: ยนตร์ แปลว่า เครื่องจักร เครื่องยนต์. ส่วน ยนต์ แปลว่า เคลื่อนที่. ภาพยนตร์ คือ ภาพที่ฉายด้วยเครื่องจักร",
-      "imageUrl": "https://i.pinimg.com/736x/3a/b9/61/3ab96161c468a6634757f3166a5b7ac8.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/3a/b9/61/3ab96161c468a6634757f3166a5b7ac8.jpg",
+      "hint": "สื่อที่ฉายภาพเคลื่อนไหวพร้อมเสียง มักฉายในโรง"
     },
     {
       "id": 55,
@@ -631,7 +685,8 @@
         "กระเทีย"
       ],
       "explanation": "พจนานุกรมฯ: คำว่า กะเทย เป็นคำไทยแท้ ไม่มี ร เรือควบกล้ำ",
-      "imageUrl": "https://pbs.twimg.com/media/E5rTpdhUcAAPNYF.jpg"
+      "imageUrl": "https://pbs.twimg.com/media/E5rTpdhUcAAPNYF.jpg",
+      "hint": "บุคคลที่มีจิตใจและพฤติกรรมไม่ตรงกับเพศกำเนิด"
     },
     {
       "id": 56,
@@ -642,7 +697,8 @@
         "พแนง"
       ],
       "explanation": "พจนานุกรมฯ: พะแนง เป็นชื่อแกงชนิดหนึ่ง ต้องเขียนแยกพยางค์เป็น พะ-แนง",
-      "imageUrl": "https://i.pinimg.com/1200x/ce/02/5c/ce025c9cd7cc42ea693cdf3076740b82.jpg"
+      "imageUrl": "https://i.pinimg.com/1200x/ce/02/5c/ce025c9cd7cc42ea693cdf3076740b82.jpg",
+      "hint": "ชื่อแกงชนิดหนึ่ง น้ำขลุกขลิก รสชาติกลมกล่อม"
     },
     {
       "id": 57,
@@ -653,7 +709,8 @@
         "เกร็ม"
       ],
       "explanation": "พจนานุกรมฯ: ทับศัพท์จาก game เป็นคำนามนับไม่ได้ในภาษาไทย ไม่ต้องเติม 'ส์' ยกเว้นเป็นชื่อเฉพาะ เช่น ซีเกมส์",
-      "imageUrl": "https://i.pinimg.com/736x/4f/e0/06/4fe0069b038ddb1b7a72af8f82afb6ea.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/4f/e0/06/4fe0069b038ddb1b7a72af8f82afb6ea.jpg",
+      "hint": "กิจกรรมการเล่นเพื่อความบันเทิงหรือแข่งขัน"
     },
     {
       "id": 58,
@@ -664,7 +721,8 @@
         "คุกกิ้"
       ],
       "explanation": "พจนานุกรมฯ: ทับศัพท์จาก cookie 'ค' เป็นอักษรต่ำ รูปเอกออกเสียงโท รูปโทออกเสียงตรี จึงต้องใช้ ไม้โท",
-      "imageUrl": "https://i.pinimg.com/736x/22/2e/95/222e95822bfbb2858133c2bfd20943ed.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/22/2e/95/222e95822bfbb2858133c2bfd20943ed.jpg",
+      "hint": "ขนมอบชิ้นเล็กๆ รสชาติหวาน มักมีความกรอบหรือนิ่ม"
     },
     {
       "id": 59,
@@ -675,7 +733,8 @@
         "สเตลเลส"
       ],
       "explanation": "พจนานุกรมฯ: ทับศัพท์จาก stainless steel สระ ai (ain) ทับศัพท์ด้วย เ- เสมอ",
-      "imageUrl": "https://i.pinimg.com/736x/bf/61/5a/bf615aa64b4ba39bea052e3b5ddf9d62.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/bf/61/5a/bf615aa64b4ba39bea052e3b5ddf9d62.jpg",
+      "hint": "โลหะผสมที่มีคุณสมบัติทนทานต่อการเกิดสนิม"
     },
     {
       "id": 60,
@@ -686,7 +745,8 @@
         "มังสวิรัด"
       ],
       "explanation": "พจนานุกรมฯ: ต้องมีสระ อิ (วิรัติ = การงดเว้น, มังสะ = เนื้อสัตว์)",
-      "imageUrl": "https://i.pinimg.com/736x/af/0c/d8/af0cd8296b7538581beca458c372b3a3.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/af/0c/d8/af0cd8296b7538581beca458c372b3a3.jpg",
+      "hint": "การงดเว้นการบริโภคเนื้อสัตว์"
     },
     {
       "id": 61,
@@ -697,7 +757,8 @@
         "อริยาบถ"
       ],
       "explanation": "พจนานุกรมฯ: บถ แปลว่า ทาง (การเคลื่อนไหวของร่างกาย) ไม่ใช่ บท (ข้อความ)",
-      "imageUrl": "https://i.pinimg.com/736x/d8/26/ac/d826ac01bce8683ca966df2e1c2bf24b.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/d8/26/ac/d826ac01bce8683ca966df2e1c2bf24b.jpg",
+      "hint": "การเคลื่อนไหวของร่างกาย เช่น ยืน เดิน นั่ง นอน"
     },
     {
       "id": 62,
@@ -708,7 +769,8 @@
         "สายสิณจน์"
       ],
       "explanation": "พจนานุกรมฯ: สิญจน์ แปลว่า รดน้ำ (ด้ายที่ใช้สำหรับทำพิธี)",
-      "imageUrl": "https://i.pinimg.com/1200x/e5/ef/93/e5ef9399d5db637b73170f32ca09e836.jpg"
+      "imageUrl": "https://i.pinimg.com/1200x/e5/ef/93/e5ef9399d5db637b73170f32ca09e836.jpg",
+      "hint": "ด้ายสีขาวที่ใช้สำหรับทำพิธีทางศาสนา"
     },
     {
       "id": 63,
@@ -719,7 +781,8 @@
         "งอนด์"
       ],
       "explanation": "พจนานุกรมฯ: งอน แปลว่า แสดงอาการโกรธเคือง สะกดด้วย น หนู ไม่ใช่ ล ลิง (งอล เป็นภาษาวัยรุ่น)",
-      "imageUrl": "https://i.pinimg.com/736x/74/ae/aa/74aeaa9e0cf937516de458893a1da64f.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/74/ae/aa/74aeaa9e0cf937516de458893a1da64f.jpg",
+      "hint": "อาการแสดงความไม่พอใจ โกรธเคือง หรือน้อยใจ"
     },
     {
       "id": 64,
@@ -730,7 +793,8 @@
         "สฉลาก"
       ],
       "explanation": "พจนานุกรมฯ: สลาก = สิ่งที่ใช้จับเสี่ยงโชค (สลากกินแบ่ง) ส่วน ฉลาก = ป้ายบอกรายละเอียดสินค้า",
-      "imageUrl": "https://tse1.mm.bing.net/th/id/OIP._QmHNE-i9mPdSFSHPOo1GQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      "imageUrl": "https://tse1.mm.bing.net/th/id/OIP._QmHNE-i9mPdSFSHPOo1GQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "hint": "สิ่งที่ใช้จับเพื่อเสี่ยงโชค หรือแผ่นป้ายบอกรายละเอียดสินค้า"
     },
     {
       "id": 65,
@@ -741,7 +805,8 @@
         "ข้าวเหนียวมูร"
       ],
       "explanation": "พจนานุกรมฯ: มูน แปลว่า คลุกเคล้าให้เข้ากัน (ข้าวเหนียวคลุกกะทิ) ไม่ใช่ มูล (ของเสีย)",
-      "imageUrl": "https://i.pinimg.com/736x/90/05/ff/9005ffb1cfb0ac66d15308a0a29cd0d2.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/90/05/ff/9005ffb1cfb0ac66d15308a0a29cd0d2.jpg",
+      "hint": "ข้าวเหนียวที่นำมาคลุกเคล้ากับน้ำกะทิให้มีรสหวานมัน"
     },
     {
       "id": 66,
@@ -752,7 +817,8 @@
         "ทสวดทรง"
       ],
       "explanation": "พจนานุกรมฯ: ทรวดทรง เป็นคำควบกล้ำไม่แท้ ทร ออกเสียง ซ",
-      "imageUrl": ""
+      "imageUrl": "",
+      "hint": "รูปร่าง, สัดส่วนของร่างกาย"
     },
     {
       "id": 67,
@@ -763,7 +829,8 @@
         "ออฟฟิช"
       ],
       "explanation": "พจนานุกรมฯ: ทับศัพท์จาก office ตัว c เมื่อเป็นตัวสะกด ให้ใช้ ศ ศาลา",
-      "imageUrl": "https://i.pinimg.com/1200x/1f/4c/a6/1f4ca6a958f5c66f4a41aa44cb3f9e1e.jpg"
+      "imageUrl": "https://i.pinimg.com/1200x/1f/4c/a6/1f4ca6a958f5c66f4a41aa44cb3f9e1e.jpg",
+      "hint": "สถานที่ทำงาน, สำนักงาน"
     },
     {
       "id": 68,
@@ -774,7 +841,8 @@
         "สตรอเบอรี"
       ],
       "explanation": "พจนานุกรมฯ: ทับศัพท์จาก strawberry ต้องมี ว์ (w) และ เบอร์รี ใช้ ร เรือ 2 ตัว (rr)",
-      "imageUrl": "https://i.pinimg.com/736x/b2/e9/a8/b2e9a89dd7c2112a503a85c2d24dcb24.jpg"
+      "imageUrl": "https://i.pinimg.com/736x/b2/e9/a8/b2e9a89dd7c2112a503a85c2d24dcb24.jpg",
+      "hint": "ผลไม้สีแดง ผิวมีเมล็ดเล็กๆ รสเปรี้ยวอมหวาน"
     },
     {
       "id": 69,
@@ -785,7 +853,8 @@
         "พอร์ตแคสต์"
       ],
       "explanation": "พจนานุกรมฯ: ทับศัพท์จาก podcast ต้องมี สต์ (-st) ตามหลักการทับศัพท์ใหม่",
-      "imageUrl": "https://yt3.googleusercontent.com/jGTvFaTKXrKfnllJ4moeQi5Ld5SxbpsiV-AUcJLCq4ON5JJt9wJ74eQx1ZYpARxlTayL45jS=s900-c-k-c0x00ffffff-no-rj"
+      "imageUrl": "https://yt3.googleusercontent.com/jGTvFaTKXrKfnllJ4moeQi5Ld5SxbpsiV-AUcJLCq4ON5JJt9wJ74eQx1ZYpARxlTayL45jS=s900-c-k-c0x00ffffff-no-rj",
+      "hint": "รายการเสียงที่เผยแพร่บนอินเทอร์เน็ตให้ผู้คนฟัง"
     },
     {
       "id": 70,
@@ -796,7 +865,8 @@
         "เวทมนต"
       ],
       "explanation": "พจนานุกรมฯ: มนตร์ แปลว่า คำศักดิ์สิทธิ์ มาจากภาษาสันสกฤต (Mantra) ต้องมี ร การันต์",
-      "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.cjGhG43yI-Hrfx2qi4Lm8gHaES?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      "imageUrl": "https://tse3.mm.bing.net/th/id/OIP.cjGhG43yI-Hrfx2qi4Lm8gHaES?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "hint": "คำศักดิ์สิทธิ์หรือวิชาลี้ลับที่เชื่อว่ามีอำนาจดลบันดาลสิ่งต่างๆ"
     }
   ]
 }
