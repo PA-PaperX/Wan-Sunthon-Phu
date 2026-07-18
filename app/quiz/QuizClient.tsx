@@ -71,7 +71,7 @@ export default function QuizClient({ session }: { session: SessionData }) {
   }, [question, currentIndex]);
 
   const hintText = useMemo(() => {
-    const baseText = question.hint || question.explanation;
+    const baseText = question.hint;
     if (!baseText) return "";
     let text = baseText;
     const sortedOptions = [...options].sort((a, b) => b.length - a.length);
@@ -79,7 +79,7 @@ export default function QuizClient({ session }: { session: SessionData }) {
       text = text.split(opt).join("___");
     });
     return text;
-  }, [question.explanation, options]);
+  }, [question.hint, options]);
 
   const handleAnswer = async (word: string) => {
     if (answered) return;
